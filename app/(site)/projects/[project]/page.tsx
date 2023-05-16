@@ -28,16 +28,18 @@ export default async function Project({ params }: Props) {
                 View Project
             </a>
         </header>
+        
+        <div>
+            <Image
+                src={project.image}
+                alt={project.name}
+                width={1920}
+                height={1080}
+                className='mt-10 border-2 border-gray-500 object-cover rounded-xl'
+            />
+        </div>
         <div className="text-lg text-white-700 mt-5">
             <PortableText value={project.content} />
         </div>
-
-        <Image
-            src={project.image}
-            alt={project.name}
-            width={1920}
-            height={1080}
-            className='mt-10 border-2 border-gray-500 object-cover rounded-xl'
-        />
     </div>
 }
